@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iYa-OQ-09Z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading Controller-->
+        <scene sceneID="pWZ-X4-1PU">
+            <objects>
+                <viewController id="4g5-HF-9zu" customClass="loadingController" customModule="Explore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qbp-5j-XUS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lpI-ej-xpn">
+                                <rect key="frame" x="37" y="530" width="350" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                <state key="normal">
+                                    <string key="title"> Other U.S. 
+    States         🌎</string>
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStarted:" destination="4g5-HF-9zu" eventType="touchUpInside" id="3Fq-kI-ZBI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob2-8B-xsT">
+                                <rect key="frame" x="37" y="88" width="197" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KqA-wM-PoI">
+                                <rect key="frame" x="37" y="182" width="350" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                <state key="normal">
+                                    <string key="title">United
+States     🇺🇸</string>
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="usaAction:" destination="4g5-HF-9zu" eventType="touchUpInside" id="iMO-Nk-p0l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uoX-ma-Ajd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vhd-eI-x7k"/>
+                    <connections>
+                        <outlet property="alsOutlet" destination="lpI-ej-xpn" id="3vF-00-Jc8"/>
+                        <outlet property="selectOutlet" destination="ob2-8B-xsT" id="aOE-16-hwy"/>
+                        <outlet property="usaOutlet" destination="KqA-wM-PoI" id="AcH-eI-z7N"/>
+                        <segue destination="35H-1L-Nan" kind="show" identifier="allStates" id="LZu-8e-Q0V"/>
+                        <segue destination="qeD-Z8-B9s" kind="show" identifier="usa" id="WHo-Q0-5T7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlu-kN-Acz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1457.9710144927537" y="-464.0625"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="S1T-q5-wN1">
+            <objects>
+                <viewController id="35H-1L-Nan" customClass="ViewController" customModule="Explore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cy3-oR-2JI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-ah-3WC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruD-3c-bCa">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1156"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ty2-Uq-OeL">
+                                                <rect key="frame" x="366" y="67" width="28" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="2T9-an-Z3b"/>
+                                                    <constraint firstAttribute="width" secondItem="ty2-Uq-OeL" secondAttribute="height" multiplier="28:23" id="J0m-KN-kdf"/>
+                                                    <constraint firstAttribute="width" constant="28" id="K7w-Gw-VK4"/>
+                                                    <constraint firstAttribute="height" constant="23" id="w88-DP-EUk"/>
+                                                </constraints>
+                                                <state key="normal" image="square.grid.2x2" catalog="system"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIQ-6b-lm9">
+                                                <rect key="frame" x="10" y="241" width="394" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="394" id="6ax-gt-dQw"/>
+                                                    <constraint firstAttribute="width" secondItem="jIQ-6b-lm9" secondAttribute="height" multiplier="197:50" id="dR2-CP-4q4"/>
+                                                    <constraint firstAttribute="height" constant="100" id="gGv-Av-WCm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                                <state key="normal" title="  Maryland">
+                                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mdbuttonAction:" destination="35H-1L-Nan" eventType="touchUpInside" id="be7-eM-OY8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZe-Yu-pys">
+                                                <rect key="frame" x="10" y="349" width="394" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="fBc-vf-JAw"/>
+                                                    <constraint firstAttribute="width" constant="394" id="gkx-oj-zMP"/>
+                                                    <constraint firstAttribute="width" secondItem="lZe-Yu-pys" secondAttribute="height" multiplier="197:50" id="hod-NV-FwF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                                <state key="normal" title="  New York"/>
+                                                <connections>
+                                                    <action selector="nybuttonAction:" destination="35H-1L-Nan" eventType="touchUpInside" id="5vv-f4-irN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUQ-8I-bQk">
+                                                <rect key="frame" x="10" y="457" width="394" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZUQ-8I-bQk" secondAttribute="height" multiplier="197:50" id="Jef-QD-Hpr"/>
+                                                    <constraint firstAttribute="width" constant="394" id="cIB-y6-ObU"/>
+                                                    <constraint firstAttribute="height" constant="100" id="fLV-Dg-eUt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                                <state key="normal" title="  Texas">
+                                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="texasbuttonAction:" destination="35H-1L-Nan" eventType="touchUpInside" id="5Wm-hD-Jjo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTV-2j-Jdc">
+                                                <rect key="frame" x="10" y="565" width="394" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="394" id="YEE-bU-bIu"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ocJ-gI-L0G"/>
+                                                    <constraint firstAttribute="width" secondItem="nTV-2j-Jdc" secondAttribute="height" multiplier="197:50" id="uRP-Oe-SgB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                                <state key="normal" title="  California">
+                                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cabuttonAction:" destination="35H-1L-Nan" eventType="touchUpInside" id="krn-Ap-dSw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu9-Hc-WHi">
+                                                <rect key="frame" x="10" y="783" width="394" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="CLM-Bs-aC0"/>
+                                                    <constraint firstAttribute="width" secondItem="Eu9-Hc-WHi" secondAttribute="height" multiplier="197:50" id="NDA-cl-zm2"/>
+                                                    <constraint firstAttribute="width" constant="394" id="Ufj-xe-HbP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                                <state key="normal" title="  Virginia">
+                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="vabuttonAction:" destination="35H-1L-Nan" eventType="touchUpInside" id="9Dh-jg-REV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrV-dA-jMh">
+                                                <rect key="frame" x="10" y="673" width="394" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SrV-dA-jMh" secondAttribute="height" multiplier="197:50" id="ChO-Nh-KAV"/>
+                                                    <constraint firstAttribute="width" constant="394" id="Jft-Zl-jxv"/>
+                                                    <constraint firstAttribute="height" constant="100" id="lfl-vm-Uf1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                                <state key="normal" title="  Michigan">
+                                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mibuttonAction:" destination="35H-1L-Nan" eventType="touchUpInside" id="8uG-hH-LxH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-3X-ir2">
+                                                <rect key="frame" x="9" y="132" width="396" height="100"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JXS-3X-ir2" secondAttribute="height" multiplier="99:25" id="i26-QJ-lRP"/>
+                                                    <constraint firstAttribute="width" constant="396" id="sj5-6d-C3g"/>
+                                                    <constraint firstAttribute="height" constant="100" id="uP8-G4-wsa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                                <state key="normal" title="  Washington D.C.">
+                                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dcbuttonAction:" destination="35H-1L-Nan" eventType="touchUpInside" id="rey-Yk-oVY"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfL-ab-0Nr">
+                                                <rect key="frame" x="258" y="241" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyp-Zy-juf">
+                                                <rect key="frame" x="261" y="501" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJN-Ms-bcX">
+                                                <rect key="frame" x="261" y="350" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eX-wC-qcW">
+                                                <rect key="frame" x="261" y="609" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB1-U8-gNz">
+                                                <rect key="frame" x="261" y="566" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-Zd-WjH">
+                                                <rect key="frame" x="261" y="674" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCU-5e-Bwa">
+                                                <rect key="frame" x="261" y="716" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOz-5O-EuB">
+                                                <rect key="frame" x="258" y="784" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzZ-sa-0pz">
+                                                <rect key="frame" x="258" y="829" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqA-2h-pA3">
+                                                <rect key="frame" x="261" y="398" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-cj-pLb">
+                                                <rect key="frame" x="261" y="458" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL6-l6-FZj">
+                                                <rect key="frame" x="258" y="285" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKb-eJ-wve">
+                                                <rect key="frame" x="9" y="52" width="291" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="291" id="5uU-ia-f6H"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="41"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deaths:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgx-48-fO6">
+                                                <rect key="frame" x="258" y="182" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5C-3w-TIB">
+                                                <rect key="frame" x="258" y="132" width="141" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JXS-3X-ir2" firstAttribute="centerX" secondItem="ruD-3c-bCa" secondAttribute="centerX" id="2Dz-bO-Smv"/>
+                                            <constraint firstItem="nTV-2j-Jdc" firstAttribute="centerX" secondItem="ruD-3c-bCa" secondAttribute="centerX" id="4bq-qM-ped"/>
+                                            <constraint firstItem="ty2-Uq-OeL" firstAttribute="leading" secondItem="nKb-eJ-wve" secondAttribute="trailing" constant="66" id="4vh-Bi-3tL"/>
+                                            <constraint firstItem="JXS-3X-ir2" firstAttribute="top" secondItem="ty2-Uq-OeL" secondAttribute="bottom" constant="42" id="7fU-5j-GrJ"/>
+                                            <constraint firstItem="jIQ-6b-lm9" firstAttribute="centerX" secondItem="ruD-3c-bCa" secondAttribute="centerX" id="7lc-cb-2C4"/>
+                                            <constraint firstItem="lZe-Yu-pys" firstAttribute="top" secondItem="jIQ-6b-lm9" secondAttribute="bottom" constant="8" id="7xT-xq-dDv"/>
+                                            <constraint firstItem="nKb-eJ-wve" firstAttribute="leading" secondItem="JXS-3X-ir2" secondAttribute="leading" id="GhT-Ec-bp9"/>
+                                            <constraint firstItem="SrV-dA-jMh" firstAttribute="top" secondItem="nTV-2j-Jdc" secondAttribute="bottom" constant="8" id="L6n-9R-U5G"/>
+                                            <constraint firstItem="JXS-3X-ir2" firstAttribute="top" secondItem="nKb-eJ-wve" secondAttribute="bottom" constant="31" id="NhC-0e-nvx"/>
+                                            <constraint firstItem="lZe-Yu-pys" firstAttribute="centerX" secondItem="ruD-3c-bCa" secondAttribute="centerX" id="PXq-yg-GjR"/>
+                                            <constraint firstItem="nKb-eJ-wve" firstAttribute="top" secondItem="ruD-3c-bCa" secondAttribute="top" constant="52" id="Qld-l1-eIa"/>
+                                            <constraint firstItem="jIQ-6b-lm9" firstAttribute="top" secondItem="JXS-3X-ir2" secondAttribute="bottom" constant="9" id="Rrn-fY-oYa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eu9-Hc-WHi" secondAttribute="trailing" constant="10" id="Sm2-B9-hwQ"/>
+                                            <constraint firstItem="SrV-dA-jMh" firstAttribute="centerX" secondItem="ruD-3c-bCa" secondAttribute="centerX" id="T66-Tf-Mdy"/>
+                                            <constraint firstItem="ZUQ-8I-bQk" firstAttribute="top" secondItem="lZe-Yu-pys" secondAttribute="bottom" constant="8" id="UOs-G1-pUv"/>
+                                            <constraint firstItem="ty2-Uq-OeL" firstAttribute="top" secondItem="ruD-3c-bCa" secondAttribute="top" constant="67" id="WlR-5y-meD"/>
+                                            <constraint firstItem="nTV-2j-Jdc" firstAttribute="top" secondItem="ZUQ-8I-bQk" secondAttribute="bottom" constant="8" id="e7r-eQ-YSA"/>
+                                            <constraint firstItem="Eu9-Hc-WHi" firstAttribute="leading" secondItem="ruD-3c-bCa" secondAttribute="leading" constant="10" id="jQ0-Uo-5vD"/>
+                                            <constraint firstItem="ZUQ-8I-bQk" firstAttribute="centerX" secondItem="ruD-3c-bCa" secondAttribute="centerX" id="jdE-tx-W7M"/>
+                                            <constraint firstItem="Eu9-Hc-WHi" firstAttribute="centerX" secondItem="ruD-3c-bCa" secondAttribute="centerX" id="tXo-2q-9l1"/>
+                                            <constraint firstItem="Eu9-Hc-WHi" firstAttribute="top" secondItem="SrV-dA-jMh" secondAttribute="bottom" constant="10" id="te0-Dt-rxe"/>
+                                            <constraint firstItem="Eu9-Hc-WHi" firstAttribute="top" secondItem="SrV-dA-jMh" secondAttribute="bottom" constant="10" id="zHt-eO-0FK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ruD-3c-bCa" firstAttribute="width" secondItem="Flr-ah-3WC" secondAttribute="width" id="Qbe-cB-dr2"/>
+                                    <constraint firstItem="ruD-3c-bCa" firstAttribute="top" secondItem="Flr-ah-3WC" secondAttribute="top" id="VBb-J7-N5f"/>
+                                    <constraint firstItem="ruD-3c-bCa" firstAttribute="leading" secondItem="Flr-ah-3WC" secondAttribute="leading" id="bLP-hm-XgX"/>
+                                    <constraint firstAttribute="bottom" secondItem="ruD-3c-bCa" secondAttribute="bottom" id="fi4-tX-VUn"/>
+                                    <constraint firstItem="ruD-3c-bCa" firstAttribute="height" secondItem="Flr-ah-3WC" secondAttribute="height" id="ohW-wr-GD4"/>
+                                    <constraint firstAttribute="trailing" secondItem="ruD-3c-bCa" secondAttribute="trailing" id="rRU-cb-HqS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mzG-aU-8Uu"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Dml-kb-qNz"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JKA-hk-WPS" firstAttribute="top" secondItem="Flr-ah-3WC" secondAttribute="top" constant="44" id="2ku-03-ecL"/>
+                            <constraint firstItem="Flr-ah-3WC" firstAttribute="bottom" secondItem="JKA-hk-WPS" secondAttribute="bottom" constant="34" id="Ret-6g-Peq"/>
+                            <constraint firstItem="Flr-ah-3WC" firstAttribute="leading" secondItem="JKA-hk-WPS" secondAttribute="leading" id="g4Q-O0-EKp"/>
+                            <constraint firstItem="JKA-hk-WPS" firstAttribute="trailing" secondItem="Flr-ah-3WC" secondAttribute="trailing" id="sCy-Bu-isZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JKA-hk-WPS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="VJU-vt-kU7"/>
+                    <navigationItem key="navigationItem" id="e7L-40-Xeb"/>
+                    <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="caCasesOutlet" destination="ZB1-U8-gNz" id="uQ1-pM-W23"/>
+                        <outlet property="caDeathsOutlet" destination="3eX-wC-qcW" id="YRY-1n-ZxC"/>
+                        <outlet property="caOutlet" destination="nTV-2j-Jdc" id="3RR-tM-uPh"/>
+                        <outlet property="dcCasesOutlet" destination="U5C-3w-TIB" id="2ek-aU-Yca"/>
+                        <outlet property="dcDeathsOutlet" destination="xgx-48-fO6" id="EYj-VH-87g"/>
+                        <outlet property="dcOutlet" destination="JXS-3X-ir2" id="xsj-bd-pJQ"/>
+                        <outlet property="mdCasesOutlet" destination="jfL-ab-0Nr" id="tgo-f7-7Py"/>
+                        <outlet property="mdDeathsOutlet" destination="mL6-l6-FZj" id="vVF-zK-9xK"/>
+                        <outlet property="mdOutlet" destination="jIQ-6b-lm9" id="rY5-th-e4y"/>
+                        <outlet property="miCasesOutlet" destination="gc2-Zd-WjH" id="4ub-bs-vby"/>
+                        <outlet property="miDeathsOutlet" destination="SCU-5e-Bwa" id="TBB-zJ-SAv"/>
+                        <outlet property="miOutlet" destination="SrV-dA-jMh" id="zRc-lw-L6e"/>
+                        <outlet property="nyCasesOutlet" destination="dJN-Ms-bcX" id="JyC-pW-JHs"/>
+                        <outlet property="nyDeathsOutlet" destination="Cyp-Zy-juf" id="ue1-o9-rv7"/>
+                        <outlet property="nyOutlet" destination="lZe-Yu-pys" id="9lu-oZ-CcR"/>
+                        <outlet property="scrollViewOutlet" destination="Flr-ah-3WC" id="3xn-Up-p60"/>
+                        <outlet property="texasCasesOutlet" destination="Ye6-cj-pLb" id="1QR-lD-ycb"/>
+                        <outlet property="texasDeathsOutlet" destination="KqA-2h-pA3" id="ocr-EF-2fQ"/>
+                        <outlet property="txOutlet" destination="ZUQ-8I-bQk" id="qr4-AJ-iz8"/>
+                        <outlet property="vaDeathsOutlet" destination="NzZ-sa-0pz" id="l5v-4C-Uv2"/>
+                        <outlet property="vaOutlet" destination="Eu9-Hc-WHi" id="Deh-QF-pxP"/>
+                        <outlet property="viCasesOutlet" destination="GOz-5O-EuB" id="E2b-eY-qf9"/>
+                        <outlet property="viewOutlet" destination="ruD-3c-bCa" id="FGP-Zb-ldQ"/>
+                        <segue destination="qeD-Z8-B9s" kind="show" identifier="md" id="CNV-2s-F8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90T-SJ-DKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-507.24637681159425" y="-489.50892857142856"/>
+        </scene>
+        <!--stateDetailsController-->
+        <scene sceneID="Kf3-PQ-eXf">
+            <objects>
+                <viewController storyboardIdentifier="stateDetailsController" title="stateDetailsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qeD-Z8-B9s" customClass="stateDetailsController" customModule="Explore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="myV-O4-FAB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maryland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfI-9f-Zcw">
+                                <rect key="frame" x="20" y="20" width="295" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-KD-tyP">
+                                <rect key="frame" x="348" y="46" width="50" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="MD">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLO-F4-0AR">
+                                <rect key="frame" x="197" y="736" width="89" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" image="info.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreInfoAction:" destination="qeD-Z8-B9s" eventType="touchUpInside" id="f5d-TA-9zq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WOY-mD-3U7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dqn-J0-pPZ"/>
+                    <connections>
+                        <outlet property="moreInfoOutlet" destination="KLO-F4-0AR" id="60I-7W-f4i"/>
+                        <outlet property="stateButtonOutlet" destination="Scg-KD-tyP" id="6Hd-A3-1Sd"/>
+                        <outlet property="stateDetailsViewOutlet" destination="myV-O4-FAB" id="xHL-7S-ky6"/>
+                        <outlet property="stateNameOutlet" destination="cfI-9f-Zcw" id="ds5-yb-9S1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYh-kk-pYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292.75362318840581" y="-807.58928571428567"/>
+        </scene>
+        <!--Search Controller-->
+        <scene sceneID="pjY-aO-e1p">
+            <objects>
+                <viewController id="qmv-pZ-W01" customClass="searchController" customModule="Explore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yRb-yi-gXd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdC-vs-eIg">
+                                <rect key="frame" x="0.0" y="26" width="318" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-aG-POQ">
+                                <rect key="frame" x="353" y="33" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MeT-s8-620"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GRZ-r9-E2d"/>
+                    <connections>
+                        <outlet property="searchFieldOutlet" destination="CdC-vs-eIg" id="gWD-pt-zas"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNd-M8-WJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310.14492753623193" y="-148.66071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kaI-GV-wxq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iYa-OQ-09Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zk4-9L-LK4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4g5-HF-9zu" kind="relationship" relationship="rootViewController" id="uNg-1b-rSR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRK-81-sVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2368.1159420289855" y="-464.0625"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CNV-2s-F8z"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
